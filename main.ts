@@ -28,7 +28,7 @@ input.onButtonPressed(Button.A, function () {
   //detects distance
   distance = sonar.ping(DigitalPin.P1, DigitalPin.P2, PingUnit.Centimeters)
   basic.showNumber(distance)
-  basic.showIcon(IconNames.StickFigure)
+  basic.showIcon(IconNames.Giraffe)
 
   // if distance < 10, neopixels turn Red
   if (distance < 10) {
