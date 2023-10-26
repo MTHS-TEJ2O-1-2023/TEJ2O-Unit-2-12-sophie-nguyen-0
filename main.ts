@@ -25,7 +25,7 @@ neopixelStrip.show()
 input.onButtonPressed(Button.A, function () {
   basic.clearScreen()
 
-  //detects distance
+  // detects distance
   distance = sonar.ping(DigitalPin.P1, DigitalPin.P2, PingUnit.Centimeters)
   basic.showNumber(distance)
   basic.showIcon(IconNames.Giraffe)
