@@ -11,7 +11,7 @@ let neopixelStrip: neopixel.Strip = null
 
 // setup
 basic.clearScreen()
-basic.showIcon(IconNames.Duck)
+basic.showIcon(IconNames.Ghost)
 
 // cleanup
 neopixelStrip = neopixel.create(DigitalPin.P16, 4, NeoPixelMode.RGB)
@@ -23,21 +23,21 @@ neopixelStrip.show()
 
 // find distance and light up LED's depending on distance
 input.onButtonPressed(Button.A, function () {
-    basic.clearScreen()
+  basic.clearScreen()
 
-    distance = sonar.ping(DigitalPin.P1, DigitalPin.P2, PingUnit.Centimeters)
-    basic.showNumber(distance)
-    basic.showIcon(IconNames.StickFigure)
+  distance = sonar.ping(DigitalPin.P1, DigitalPin.P2, PingUnit.Centimeters)
+  basic.showNumber(distance)
+  basic.showIcon(IconNames.StickFigure)
 
-    if (distance < 10) {
-        neopixelStrip.setPixelColor(0, neopixel.colors(NeoPixelColors.Red))
-        neopixelStrip.setPixelColor(1, neopixel.colors(NeoPixelColors.Red))
-        neopixelStrip.setPixelColor(2, neopixel.colors(NeoPixelColors.Red))
-        neopixelStrip.setPixelColor(3, neopixel.colors(NeoPixelColors.Red))
-    } else {
-        neopixelStrip.setPixelColor(0, neopixel.colors(NeoPixelColors.Green))
-        neopixelStrip.setPixelColor(1, neopixel.colors(NeoPixelColors.Green))
-        neopixelStrip.setPixelColor(2, neopixel.colors(NeoPixelColors.Green))
-        neopixelStrip.setPixelColor(3, neopixel.colors(NeoPixelColors.Green))
-    }
+  if (distance < 10) {
+    neopixelStrip.setPixelColor(0, neopixel.colors(NeoPixelColors.Red))
+    neopixelStrip.setPixelColor(1, neopixel.colors(NeoPixelColors.Red))
+    neopixelStrip.setPixelColor(2, neopixel.colors(NeoPixelColors.Red))
+    neopixelStrip.setPixelColor(3, neopixel.colors(NeoPixelColors.Red))
+  } else {
+    neopixelStrip.setPixelColor(0, neopixel.colors(NeoPixelColors.Green))
+    neopixelStrip.setPixelColor(1, neopixel.colors(NeoPixelColors.Green))
+    neopixelStrip.setPixelColor(2, neopixel.colors(NeoPixelColors.Green))
+    neopixelStrip.setPixelColor(3, neopixel.colors(NeoPixelColors.Green))
+  }
 })
