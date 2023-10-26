@@ -25,10 +25,12 @@ neopixelStrip.show()
 input.onButtonPressed(Button.A, function () {
   basic.clearScreen()
 
+  //detects distance
   distance = sonar.ping(DigitalPin.P1, DigitalPin.P2, PingUnit.Centimeters)
   basic.showNumber(distance)
   basic.showIcon(IconNames.StickFigure)
 
+  // if distance < 10, neopixels turn Red
   if (distance < 10) {
     neopixelStrip.setPixelColor(0, neopixel.colors(NeoPixelColors.Red))
     neopixelStrip.setPixelColor(1, neopixel.colors(NeoPixelColors.Red))
