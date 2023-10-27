@@ -60,7 +60,7 @@ while True:
             print(neopixel_strip[2])
             print(neopixel_strip[3])
             neopixel_strip.show()
-            sleep(3000)
+            sleep(1000)
             display.show(Image.PACMAN)
 
         # if distance >= 10cm then neopixels light up green
@@ -74,5 +74,5 @@ while True:
             print(neopixel_strip[2])
             print(neopixel_strip[3])
             neopixel_strip.show()
-            sleep(3000)
+            sleep(1000)
             display.show(Image.PACMAN)
