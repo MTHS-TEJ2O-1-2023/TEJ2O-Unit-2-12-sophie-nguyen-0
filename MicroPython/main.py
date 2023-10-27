@@ -6,6 +6,7 @@ This module is a Micro:bit MicroPython program that detects distance with sonar 
 
 from microbit import *
 from machine import time_pulse_us
+import neopixel
 
 
 # variables
