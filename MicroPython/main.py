@@ -1,6 +1,6 @@
 """
-Created by: Mr. Coxall
-Created on: Sep 2020
+Created by: Sophie
+Created on: oct 2023
 This module is a Micro:bit MicroPython program that detects distance with sonar and lights up LEDs.
 """
 
