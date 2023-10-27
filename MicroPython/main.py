@@ -20,22 +20,22 @@ display.clear
 display.show(Image.PACMAN)
 sleep(1000)
 
+# neopixels clean up
+neopixel_strip[0] = (0, 0, 0)
+neopixel_strip[1] = (0, 0, 0)
+neopixel_strip[2] = (0, 0, 0)
+neopixel_strip[3] = (0, 0, 0)
+print(neopixel_strip[0])
+print(neopixel_strip[1])
+print(neopixel_strip[2])
+print(neopixel_strip[3])
+neopixel_strip.show()
+
 # setup
 trig.write_digital(0)
 echo.read_digital()
 
 while True:
-    # neopixels setup
-    neopixel_strip[0] = (0, 0, 0)
-    neopixel_strip[1] = (0, 0, 0)
-    neopixel_strip[2] = (0, 0, 0)
-    neopixel_strip[3] = (0, 0, 0)
-    print(neopixel_strip[0])
-    print(neopixel_strip[1])
-    print(neopixel_strip[2])
-    print(neopixel_strip[3])
-    neopixel_strip.show()
-
     if button_a.is_pressed():
         # output for sonar
         trig.write_digital(1)
